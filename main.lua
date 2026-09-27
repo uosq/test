@@ -22,5 +22,11 @@ console.print(engine.get_max_clients());
 local cvar = engine.get_convar("sv_cheats");
 
 if (cvar) then
-  console.print(cvar:get_int());
+	console.print(cvar:get_int());
 end
+
+local function oh_shit(cmd)
+	print("hello");
+end
+
+events.register("CreateMove", oh_shit);
